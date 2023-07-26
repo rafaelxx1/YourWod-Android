@@ -13,6 +13,18 @@
         android:theme="@style/Theme.YourWod"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.FormAddPr"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.PrList"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat">
+
+        </activity>
+        <activity
             android:name=".ui.activity.FormAddWod"
             android:exported="true"
             android:theme="@style/Theme.AppCompat">

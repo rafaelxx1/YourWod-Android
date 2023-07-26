@@ -15,8 +15,8 @@ class WodListAdapter(
 ) : RecyclerView.Adapter<WodListAdapter.ViewH>() {
     private val wods = wods.toMutableList()
 
-    class ViewH(view: View) : RecyclerView.ViewHolder(view){
-        fun putIt(wod: Wod){
+    class ViewH(view: View) : RecyclerView.ViewHolder(view) {
+        fun putIt(wod: Wod) {
             val title = itemView.findViewById<TextView>(R.id.tvWodCard_tittle)
             title.text = wod.wodTitle
 
@@ -47,7 +47,7 @@ class WodListAdapter(
         holder.putIt(wod)
     }
 
-    fun update(wods: List<Wod>){
+    fun update(wods: List<Wod>) {
         this.wods.clear()
         this.wods.addAll(wods)
         notifyDataSetChanged()

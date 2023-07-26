@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- custom_border.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#0380fc" /> <!-- cor do preenchimento dentro da borda, você pode alterar para a cor desejada ou usar transparente (#00000000) -->
+    <solid android:color="#F4C536" /> <!-- cor do preenchimento dentro da borda, você pode alterar para a cor desejada ou usar transparente (#00000000) -->
     <stroke
         android:color="#000000"
         /><!-- cor da borda, você pode alterar para a cor desejada -->
     <!-- espessura da borda, você pode alterar o valor para o desejado -->
-    <corners android:radius="8dp" /> <!-- raio dos cantos da borda, você pode ajustar para o desejado -->
+    <corners android:radius="20dp" /> <!-- raio dos cantos da borda, você pode ajustar para o desejado -->
 </shape>

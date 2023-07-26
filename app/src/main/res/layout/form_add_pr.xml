@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edCategory_pr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edWeight_pr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="___ KG"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/edCategory_pr"
+         />
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/edDate_pr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edWeight_pr"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:mask="__/__/2023"
+        android:hint="00/00/2023"
+        android:inputType="date"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearPr_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edDate_pr"
+        app:layout_constraintVertical_bias="1"
+        android:layout_marginBottom="10dp"
+        >
+        <Button
+            android:id="@+id/btnBack_pr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="BACK"
+            android:background="@drawable/button_border_pr"
+            />
+
+        <Button
+            android:id="@+id/btnSave_pr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="SAVE PR"
+            android:background="@drawable/button_border_pr"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

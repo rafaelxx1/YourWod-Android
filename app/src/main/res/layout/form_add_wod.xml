@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/etFormWod_title_wod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Wod Tittle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFormWod_wod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="workout"
+        app:layout_constraintTop_toBottomOf="@id/etFormWod_title_wod" />
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/etFormWod_time_wod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="00:00:00"
+        app:mask="__:__:__"
+        android:inputType="time"
+        app:layout_constraintTop_toBottomOf="@id/etFormWod_wod" />
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/etFormWod_date_wod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="00/00/2023"
+        app:mask="__/__/2023"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/etFormWod_time_wod" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,8 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etFormWod_date_wod"
-        app:layout_constraintVertical_bias="1"
-        >
+        app:layout_constraintVertical_bias="1">
 
         <Button
             android:id="@+id/btnFormWod_back"
@@ -37,46 +81,5 @@
             android:text="save wod" />
 
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/etFormWod_title_wod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="Wod Tittle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etFormWod_wod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="workout"
-        app:layout_constraintTop_toBottomOf="@id/etFormWod_title_wod" />
-
-    <EditText
-        android:id="@+id/etFormWod_time_wod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="00:00:00"
-        android:inputType="time"
-        app:layout_constraintTop_toBottomOf="@id/etFormWod_wod" />
-
-    <EditText
-        android:id="@+id/etFormWod_date_wod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="00/00/2023"
-        android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@id/etFormWod_time_wod" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
