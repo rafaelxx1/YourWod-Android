@@ -1,4 +1,4 @@
-package com.example.yourwod.ui.theme
+/*package values.theme
 
 import android.app.Activity
 import android.os.Build
@@ -15,7 +15,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import kotlin.text.Typography as Typography1
-import com.example.yourwod.ui.theme.Typography
+import values.theme.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -69,4 +69,4 @@ fun OrgsTheme(
         typography = Typography,
         content = content
     )
-}
+}*/

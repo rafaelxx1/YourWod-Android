@@ -23,6 +23,7 @@ class PrList : AppCompatActivity(R.layout.pr_list_activity) {
         super.onResume()
         adapter.update(dao.getAllPr())
         btnAddPr()
+        btnBack()
     }
 
     private fun configureRecylerView(){
@@ -34,6 +35,13 @@ class PrList : AppCompatActivity(R.layout.pr_list_activity) {
         val btnAddPr = findViewById<Button>(R.id.btnForm_pr)
         btnAddPr.setOnClickListener {
             goToFormAddPr()
+        }
+    }
+
+    private fun btnBack(){
+        val btnBack = findViewById<Button>(R.id.btnBack_pr_list)
+        btnBack.setOnClickListener {
+            finish()
         }
     }
 

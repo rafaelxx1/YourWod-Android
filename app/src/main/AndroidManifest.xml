@@ -14,33 +14,28 @@
         tools:targetApi="31">
         <activity
             android:name=".ui.activity.FormAddPr"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat">
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".ui.activity.PrList"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat">
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".ui.activity.FormAddWod"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat">
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".ui.activity.WodList"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat">
+            android:exported="true">
 
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#6BBEFF" /> <!-- Cor de preenchimento do botão -->
+    <solid android:color="@android:color/holo_blue_light" /> <!-- Cor de preenchimento do botão -->
     <corners android:radius="15dp" /> <!-- Raio dos cantos arredondados, você pode ajustar para o valor desejado -->
     <stroke
         android:color="@android:color/black"/> <!-- Cor da borda do botão --><!-- Espessura da borda, você pode ajustar para o valor desejado -->

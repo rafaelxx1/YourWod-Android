@@ -6,46 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_wod_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_pr_list"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="wod list"
-        android:background="@android:color/holo_blue_light"
+        android:layout_height="60dp"
 
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="wod list"
+        app:cornerRadius="15dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toTopOf="@id/btn_pr_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_pr_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@android:color/holo_orange_light"
+        android:layout_height="60dp"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:text="PR LIST"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="15dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_evolution"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="EVOLUTION"
+        app:cornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_pr_list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_pr_list"
-        android:background="@android:color/holo_green_light"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="10dp"
-        android:text="EVOLUTION"
-
         />
 
 

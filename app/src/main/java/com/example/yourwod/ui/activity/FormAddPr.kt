@@ -17,6 +17,7 @@ class FormAddPr : AppCompatActivity(R.layout.form_add_pr) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         btnSave()
+        btnBack()
     }
 
     private fun btnSave(){
@@ -24,6 +25,13 @@ class FormAddPr : AppCompatActivity(R.layout.form_add_pr) {
         btnSave.setOnClickListener {
             val dao = DaoPr()
             dao.addPr(createPr())
+            finish()
+        }
+    }
+
+    private fun btnBack(){
+        val btnBack = findViewById<Button>(R.id.btnBack_pr)
+        btnBack.setOnClickListener {
             finish()
         }
     }
