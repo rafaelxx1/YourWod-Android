@@ -7,16 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yourwod.R
 import com.example.yourwod.dao.DaoPr
+import com.example.yourwod.databinding.PrListActivityBinding
 import com.example.yourwod.ui.recyclerview.adapter.PrListAdapter
 
-class PrList : AppCompatActivity(R.layout.pr_list_activity) {
+class PrList : AppCompatActivity() {
 
+    private val binding by lazy {PrListActivityBinding.inflate(layoutInflater)}
     private val dao = DaoPr()
     private val adapter = PrListAdapter(this, dao.getAllPr())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         configureRecylerView()
+        setContentView(binding.root)
     }
 
     override fun onResume() {
@@ -27,19 +30,19 @@ class PrList : AppCompatActivity(R.layout.pr_list_activity) {
     }
 
     private fun configureRecylerView(){
-        val recyclerView = findViewById<RecyclerView>(R.id.pr_list_recycler_view)
+        val recyclerView = binding.prListRecyclerView
         recyclerView.adapter = this.adapter
     }
 
     private fun btnAddPr(){
-        val btnAddPr = findViewById<Button>(R.id.btnForm_pr)
+        val btnAddPr = binding.btnFormPr
         btnAddPr.setOnClickListener {
             goToFormAddPr()
         }
     }
 
     private fun btnBack(){
-        val btnBack = findViewById<Button>(R.id.btnBack_pr_list)
+        val btnBack = binding.btnBackPrList
         btnBack.setOnClickListener {
             finish()
         }

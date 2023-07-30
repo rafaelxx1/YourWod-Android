@@ -2,6 +2,8 @@ package com.example.yourwod
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.WindowManager
 import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,15 +15,21 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.yourwod.databinding.MainYourwodActivityBinding
 import com.example.yourwod.ui.activity.PrList
 import com.example.yourwod.ui.activity.WodList
 
 
-class MainActivity : AppCompatActivity(R.layout.main_yourwod_activity) {
+class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy { MainYourwodActivityBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         configureBtnWodList()
         configureBtnPrList()
+
+        setContentView(binding.root)
     }
 
 
@@ -36,7 +44,7 @@ class MainActivity : AppCompatActivity(R.layout.main_yourwod_activity) {
     }
 
     private fun configureBtnWodList() {
-        val btnWodList = findViewById<Button>(R.id.btn_wod_list)
+        val btnWodList = binding.btnWodList
 
         btnWodList.setOnClickListener {
             goToWodList()
@@ -44,7 +52,7 @@ class MainActivity : AppCompatActivity(R.layout.main_yourwod_activity) {
     }
 
     private fun configureBtnPrList() {
-        val btnPrList = findViewById<Button>(R.id.btn_pr_list)
+        val btnPrList = binding.btnPrList
 
         btnPrList.setOnClickListener {
             goToPrList()

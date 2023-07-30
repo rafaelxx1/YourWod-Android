@@ -8,17 +8,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yourwod.R
 import com.example.yourwod.dao.DaoWod
+import com.example.yourwod.databinding.WodListActivityBinding
 import com.example.yourwod.ui.recyclerview.adapter.WodListAdapter
 
 
-class WodList : AppCompatActivity(R.layout.wod_list_activity) {
+class WodList : AppCompatActivity() {
 
+    private val binding by lazy {WodListActivityBinding.inflate(layoutInflater) }
     private val dao = DaoWod()
     private val adapter = WodListAdapter(this, dao.getAllWods())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         configureRecyclerView()
+        setContentView(binding.root)
     }
 
     override fun onResume() {
@@ -30,21 +33,21 @@ class WodList : AppCompatActivity(R.layout.wod_list_activity) {
 
 
     private fun configureRecyclerView(){
-        val recyclerView = findViewById<RecyclerView>(R.id.recycler_wod_list)
+        val recyclerView = binding.recyclerWodList
         recyclerView.adapter = adapter
     }
 
 
 
     private fun btnBack() {
-        val btnBack = findViewById<Button>(R.id.btn_back)
+        val btnBack = binding.btnBack
         btnBack.setOnClickListener {
             finish()
         }
     }
 
     private fun btnAddWod(){
-        val btnAddWod = findViewById<Button>(R.id.btn_form)
+        val btnAddWod = binding.btnForm
         btnAddWod.setOnClickListener {
             goToFormAddWod()
         }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yourwod.R
+import com.example.yourwod.databinding.AthleteWodInfoActivityBinding
 import com.example.yourwod.model.Wod
 
 class WodListAdapter(
@@ -15,18 +16,19 @@ class WodListAdapter(
 ) : RecyclerView.Adapter<WodListAdapter.ViewH>() {
     private val wods = wods.toMutableList()
 
-    class ViewH(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewH(binding: AthleteWodInfoActivityBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        private val title = binding.tvWodCardTittle
+        private val workout = binding.tvWodCardWod
+        private val timeWod = binding.tvWodCardTime
+        private val dateWod = binding.tvWodCardDate
         fun putIt(wod: Wod) {
-            val title = itemView.findViewById<TextView>(R.id.tvWodCard_tittle)
             title.text = wod.wodTitle
 
-            val workout = itemView.findViewById<TextView>(R.id.tvWodCard_wod)
             workout.text = wod.wod
 
-            val timeWod = itemView.findViewById<TextView>(R.id.tvWodCard_time)
             timeWod.text = wod.wodTime.toString()
 
-            val dateWod = itemView.findViewById<TextView>(R.id.tvWodCard_date)
             dateWod.text = wod.wodDate.toString()
 
         }
@@ -34,8 +36,8 @@ class WodListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewH {
         val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.athlete_wod_info_activity, parent, false)
-        return ViewH(view)
+        val binding = AthleteWodInfoActivityBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ViewH(binding)
     }
 
     override fun getItemCount(): Int {
