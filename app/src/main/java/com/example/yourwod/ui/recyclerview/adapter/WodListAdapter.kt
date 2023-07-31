@@ -35,7 +35,6 @@ class WodListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewH {
-        val inflater = LayoutInflater.from(context)
         val binding = AthleteWodInfoActivityBinding.inflate(LayoutInflater.from(context), parent, false)
         return ViewH(binding)
     }

@@ -5,23 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ScrollView
         android:id="@+id/scroll_vw_wod_list"
         android:layout_width="match_parent"
         android:layout_height="550dp"
-        app:layout_constraintBottom_toTopOf="@id/linear_layout_hori_wod_list"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_wod_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/athlete_wod_info_activity" />
+            tools:listitem="@layout/athlete_wod_info_activity"
+            />
 
 
     </ScrollView>
@@ -29,35 +27,34 @@
     <LinearLayout
         android:id="@+id/linear_layout_hori_wod_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_back"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="52dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_weight="1"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="back"
-            app:cornerRadius="15dp"/>
+            app:cornerRadius="15dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_form"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="52dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_weight="1"
             android:backgroundTint="@android:color/holo_blue_light"
             android:text="add wod"
-            app:cornerRadius="15dp"
-            />
+            app:cornerRadius="15dp" />
     </LinearLayout>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

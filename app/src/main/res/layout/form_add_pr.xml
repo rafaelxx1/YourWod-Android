@@ -5,38 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edCategory_pr"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_form_pr_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Category"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edWeight_pr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="___ KG"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@id/edCategory_pr"
-         />
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <com.santalu.maskara.widget.MaskEditText
-        android:id="@+id/edDate_pr"
-        android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edCategory_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_form_pr_kg"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/edWeight_pr"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:mask="__/__/2023"
-        android:hint="00/00/2023"
-        android:inputType="date"
-        />
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_form_pr_category"
+        app:layout_constraintStart_toStartOf="@id/layout_form_pr_category"
+        app:layout_constraintEnd_toEndOf="@id/layout_form_pr_category"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/edWeight_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="kg"
+            app:mask="___"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_form_pr_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_form_pr_kg"
+        app:layout_constraintStart_toStartOf="@id/layout_form_pr_category"
+        app:layout_constraintEnd_toEndOf="@id/layout_form_pr_category"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/edDate_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="00/00/2023"
+            app:mask="__/__/2023"
+            android:inputType="date"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <LinearLayout
         android:id="@+id/linearPr_form"
@@ -45,11 +74,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edDate_pr"
-        app:layout_constraintVertical_bias="1"
-        android:layout_marginBottom="10dp"
         >
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack_pr"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -57,10 +83,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="BACK"
-            android:background="@drawable/button_border_pr"
+            android:backgroundTint="#F4D77E"
             />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave_pr"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -68,7 +94,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="SAVE PR"
-            android:background="@drawable/button_border_pr"
+            android:backgroundTint="#F4D77E"
             />
 
     </LinearLayout>
