@@ -71,7 +71,7 @@
             android:paddingTop="10dp"
             app:layout_constraintBottom_toTopOf="@id/btn_wod_list"
             android:scaleType="fitCenter"
-            android:src="@drawable/img" />
+            android:src="@drawable/img_1" />
 
     </com.google.android.material.card.MaterialCardView>
 
